@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PastWeb</title>
+    <link rel="stylesheet" href="pastweb.css">
+    <style>
+        @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Caption 4 LAB-1</h2>
+    </header>
+
+    <div class="container">
+        <div class="tooltips">
+            <p>Tooltips:ข้อความแสดงคำอธิบายโดย ผ่านการกระตุ่นเช่น คลิก,เลื่อนเม้าผ่าน เป็นต้น</p>
+            <div class="icon">
+                <span>Tooltips...</span>
+                <b class="ion-jet"></b>
+            </div>
+        </div>
+
+
+
+        <div>
+            <p>Pagination: แถบแสดงตำแหน่งของหน้าเว็บหรือitemต่างๆภายในเว็บไซต์</p>
+            <div class="Paginatiun">
+                <a href="#">&laquo;</a>
+                <a href="###" class="ac">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+        <div>
+            <p>Navigaterbar: แถบเมนูแสดงหลักของหน้าเว็ปต่างๆ</p>
+            <div class="Navigaterbar">
+                <a href="#" class="logo"><i class="ion-ios-flame"></i></a>
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">CONTACT</a>
+                <a href="#">LOGIN</a>
+            </div>
+        </div>
+        <div>
+            <p>dropdown : lisiรายการให้เลือก</p>
+
+            <div class="dropdown">
+                <input type="checkbox"  class="checkbox" id="che">
+                   <label for="che">dropdown<i class="ion-chevron-right"></i></label>
+                  
+                <!--<select>
+                    <option>item 1</option>
+                    <option>item 2</option>
+                    <option>item 3</option>
+                    <option selected>item 4</option>
+                </select>-->
+                <ul class="main">
+                    <li><a>item1</a></li>
+                    <li><a>item2</a></li>
+                    <li><a>item3</a>
+                        <ul class="item3">
+                            <li><a>item3.1</a></li>
+                            <li><a>item3.2</a></li>
+                            <li><a>item3.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a>item4</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">   
+            <input type="checkbox" id="sideche" class="sideche"> 
+            <section class="black">
+                <p>sidebar:คล้ายกับ Navigaterbar แต่นิยมใช้เป็นเมนูเสริม เช่นการตั้งค่าโปรไทฟ์เป็นต้น</p>
+                <label class="ion-navicon-round" for="sideche"></label>
+            </section>
+             
+            <div class="side">
+                
+                <b>MY APP</b>
+                <label class="ion-close" for="sideche"></label>
+                <ul class="list">
+                    <li><a href="#"><i class="ion-ios-star"></i>manu1</a></li>
+                    <li><a href="#"><i class="ion-ios-star"></i>manu2</a></li>
+                    <li><a href="#"><i class="ion-ios-star"></i>manu3</a></li>
+                    <li><a href="#"><i class="ion-ios-star"></i>manu4</a></li>
+                    <li><a href="#"><i class="ion-ios-star"></i>manu5</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+     
+        <div>
+            <p>loader : แสดงการloadต่างๆภายในหน้าweb</p>
+            <div class="loader">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

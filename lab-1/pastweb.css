@@ -1,0 +1,415 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position:static;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+}
+/*hr{
+    margin: 1px;
+    color:black;
+    font-size: 10px;
+}*/
+header{
+    height:100px;
+    width:100%;
+    background-color: chocolate;
+    font-size:20px;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px;
+    border-color: black;
+    border-style: solid;
+    
+}
+div.container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+   /*justify-content:space-evenly;*/
+   justify-content:center;
+   /*order:4;*/
+   background-color:whitesmoke;
+   position: static;
+}
+div.container > div{
+    height: 400px;
+    width: 25%;
+    border:1px solid black;
+    margin-left: 10px;
+    margin-top:20px;
+
+}
+div.tooltips{
+    /*position: absolute;*/
+}
+div.tooltips > div.icon{
+    position: relative;
+    left: 30%;
+    top: 18.75%;
+    height: 150px;
+    width: 150px;
+    /*border:1px solid black*/
+}   
+div.icon > b{
+  position: absolute;
+  font-size: 70px;
+  text-align: center;
+  left:30%;
+  top:30%;
+  transform:rotate(0deg);
+  transition: all 0.5s;
+
+  
+}
+div.icon > span{
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    background-color:black;
+    color:white;
+    text-align: center;
+    border-radius: 7px;
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+div.icon > span:before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color:black;
+    left: 50%;
+    transform: rotate(45deg) translateY(25px);
+    z-index: -1;
+    /*transition: 0.3s opacity;
+    opacity: 0;*/
+    
+}
+    
+ div.icon:hover >span{
+    opacity: 1;
+}
+/*div.icon:hover >span:before{  แบบนี้ก็ได้นะ
+    opacity: 1;
+    background-color: red;
+}*/     
+div.icon:hover >b{
+    /*transform:rotate(45deg);*/
+    color:  greenyellow;
+    transform:rotate(90deg) scale(2,2);
+}
+/*"Paginatiun*/
+div.Paginatiun{
+    position: relative;
+    width:99.5%;
+    height:30px;
+    top:10%;
+    /*border:1px solid coral;*/
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+div.Paginatiun > a{
+    margin:0px; 
+    position: relative;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    height:95%;
+    width: 30px;
+    color:black;
+    display:inline-block;
+    text-decoration: none;
+    text-align:center;
+    vertical-align: middle;
+    line-height: 30px;
+
+    
+}
+/*div.Paginatiun > a:last-child,div.Paginatiun > a:first-child{
+     border-left: ;
+}*/
+div.Paginatiun > a:first-child{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+div.Paginatiun > a:last-child{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius:4px;
+    border-right: 1px solid black;
+}
+a[href="###"]{
+    background-color: GreenYellow;
+}
+div.Paginatiun > a:hover:not(.ac){
+    background-color: gray;
+    cursor: help;
+}
+a[href="###"]:hover{
+    /*background-color: greenyellow;*/
+    cursor:not-allowed;
+}
+
+/*์Navigater bar*/
+div.Navigaterbar{
+  margin-top:20px;
+  /*border:2px solid blueviolet;*/
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  /*align-items:stretch;*/
+  height: 50px;
+  background-color: chartreuse;
+    
+}
+div.Navigaterbar > a{
+    text-decoration: none;
+    color:black;
+    height: 99.5%;
+    font-size: 15px;
+    line-height: 50px;
+    
+}
+div.Navigaterbar > a.logo{
+    flex-grow: 10;
+    
+}
+div.Navigaterbar > a:not(.logo){
+   flex-grow:1;
+   text-align: center;
+   margin-left: 5px;
+}
+a > i.ion-ios-flame{
+    font-size: 50px;
+    text-align: center;
+    margin-left: 20px;
+}
+div.Navigaterbar > a:hover:not(.logo){
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: 5px 10px black;
+}
+/*dropdownlist*/
+div.dropdown{
+    position: relative;
+    left:10px;
+}
+div.dropdown > label{
+    position: relative;
+    margin: 0;
+    display:block;
+    width:120px;
+    height:40px;
+    border:1px solid black;
+    background-color: chartreuse;
+    /*text-align: center;*/
+    line-height: 40px;
+}
+div.dropdown > input.checkbox{
+    position: absolute;
+}
+label>i{
+  position: absolute;
+  left:85%;
+  transition: all 0.3s;
+}
+input.checkbox:checked ~ label i{ /*2step*/
+    transform: rotate(90deg); 
+}
+ul.main{
+    position: relative;
+    margin: 0; 
+    display: none;
+}
+ul.main > li{
+    display:block;
+    width:122px;
+    height:40px;
+    text-align: center;
+    /*border-top:1px solid black;*/
+    border-bottom:1px solid black;
+    background-color: chartreuse;
+    position: relative;
+    left: -40px;
+    line-height: 40px;
+   
+}
+li{
+    list-style:none;
+}
+ul.main > li:hover{
+    background-color: Brown;
+}
+input.checkbox:checked ~ ul.main{
+    display:block;
+}
+
+li > ul.item3 {
+    display:block;
+    position: absolute;
+    left: 100px;
+    /*border:1px solid brown;*/
+    top:0%;
+    display: none;
+}
+ul.item3 >li{
+    width: 100px;
+    height:40px;
+    position: relative;
+  
+    border-bottom:1px solid black;
+    background-color:Brown ;
+    left: -18%;
+    
+}
+li:hover > ul.item3{
+    display:block;
+}
+li:hover li:first-child{
+    
+    /*background-color: coral;*/
+      border-top:1px solid black;
+     
+}
+li:hover li{
+    top:-1px;
+}
+/*sidebar*/
+div.sidebar > section.black{
+    position: absolute;
+    display: block;
+    color:black;
+    /*background-color: deeppink;*/
+    height:100px;
+    width: 200px;
+    background-position: center;
+    background-size:cover;
+    transform: translateX(0px);
+    
+     
+}
+section.black > p{
+    position: absolute;
+    left:25px;
+}
+label.ion-navicon-round{
+    position: absolute;
+    color:blue;
+    font-size: 30px;
+    
+
+}
+
+div.sidebar > div.side{
+    position: relative;
+    width:130px;
+    height: 100%;
+    background-color:greenyellow;
+    /*transform: translateX(-130px);*/
+    display:none;
+}
+div.side > b{
+    position: relative;
+    display:inline-block;
+    text-align: center;
+    padding-top: 20px;
+    left:10%;
+  
+    
+}
+div.side > label.ion-close{
+    color:black;
+    position: absolute;
+    left: 100px;
+    top:10px;
+    font-size: 20px;
+    
+}
+div.side > ul.list{
+    position: relative;
+    width:90px;
+    height:83.9%;
+    top:10px;
+    background-color:LawnGreen;
+   
+}
+ul.list > li{
+    position: relative;
+    display:block;
+    width:128px;
+    line-height:60px;
+    border-top:2px solid rgb(255,255,255,.1);
+    border-bottom:1px solid DarkGreen;
+    left: -45%;
+    text-align: center; 
+    font-size: 20px;  
+}
+ul.list > li a{
+    text-decoration: none;
+    color:black;
+}
+ul.list > li a i{
+    margin-right:6px;
+    
+}
+
+
+div.sidebar > input.sideche{
+    display:none;
+}
+
+input.sideche:checked ~ div.side{
+    display:block;
+}
+input.sideche:checked ~ section.black{
+    transform: translateX(130px);
+}
+input.sideche:checked ~ section.black label{
+    display:none;
+}
+input.sideche:checked ~ section.black p{
+    left:0px;
+}
+ul.list li:hover > a{
+    color:red;
+    margin-left: 30px;
+}
+div.side > label.ion-close:hover{
+   color:red;
+   transform:scale(2,2);
+}
+/*lodeder*/
+
+div > div.loader{
+    width:80px;
+    height: 80px;
+    border:16px solid black;
+    position: absolute;
+    top:90%;
+    left:72%;
+    border-top:16px solid greenyellow;
+    animation: spining 3s infinite linear;
+    border-radius: 50%;
+
+}
+@keyframes spining {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes spin2{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+div > div.loader:hover{
+    animation: spin2 0.5s infinite linear;
+    border-top: 16px solid red;
+}
