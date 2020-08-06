@@ -11,3 +11,161 @@ header{
     line-height:50px;
     padding:0px;
 }
+div[class *= "web"]{
+    /*border:1px solid black;*/
+    margin-bottom:20px;
+    border:1px solid black;
+}
+div.container {
+    position:static;
+    display:flex;
+    flex-direction:column;
+    justify-content:stretch;
+}
+div.web1 > h2{
+    text-align:center;
+}
+
+div.web1 > div.containerweb1{
+    height:900px;
+    width:100%;
+    background-color:yellow;
+    display:grid;
+    grid-template-columns:450px 450px 450px;
+    grid-template-rows:50px 50px 100px 100px 100px 100px 100px 100px 100px;
+    grid-gap:10px;
+    justify-content:center;
+    /*align-content:center;*/
+    align-content:center;
+    
+}
+  div.containerweb1 > div{
+    
+    text-align:center;
+    border:1px solid black;
+    background-color:orange;
+    font-size:25px;
+   
+}
+div.containerweb1 > div.one{
+    grid-column:1/4;
+    line-height:50px;
+    
+}
+div.containerweb1 > div.one1{
+    grid-area:2/1/2/4;
+    line-height:50px;
+    
+}
+
+/*div.containerweb1 > div.one div{
+    border:1px solid black;
+    width:80%;
+    position: relative;
+    top:23%;
+    left:10%;
+    height:50px;
+    background-color:yellowgreen;
+    line-height:50px;
+}*/
+
+div.containerweb1 > div.two{
+    /*grid-area:;*/
+    /*grid-column:1/4;*/
+    grid-row:3/5;
+    grid-column:1/4;
+    line-height:200px;
+}
+div.containerweb1 > div.tree{
+    grid-area:5/1/7/4;
+    line-height:200px;
+}
+div.containerweb1 > div.fore{
+    grid-area:7/1/9/2;
+    line-height:200px;
+}
+div.containerweb1 > div.fire{
+    grid-area:7/2/9/3;
+    line-height:200px;
+}
+div.containerweb1 > div.six{
+    line-height:100px;
+    grid-column:3/4;
+    grid-row:7/9;
+    line-height:200px;
+}
+div.containerweb1 > div.seven{
+    grid-area:9/1/10/4;
+    line-height:100px;
+}
+
+/*-pantip*/
+div.web2 > div.containerweb2{
+    height:1700px;
+    width:100%;
+    background-color:MediumOrchid;
+    display:grid;
+    grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+    grid-template-rows:100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px ;
+    grid-gap:10px;
+    justify-content:center;
+    align-content:center;
+}
+div.web2 > div.containerweb2 div{
+    border:1px solid black;
+    background-color:Purple;
+    text-align:center;
+    font-size:25px;
+    border-radius: 10px;
+    
+}
+div.containerweb2 > div.a1{
+    grid-column:1/5;
+
+}
+div.containerweb2 > div.a1 div{
+    border:1px solid black;
+    height:50px;
+    
+    background-color:DarkMagenta;
+    position:relative;
+    width:70%;
+    top:16px;
+    left:15%;
+    line-height:50px;
+    border-radius: 0px;
+}
+
+div.containerweb2 > div.a2{
+    grid-area:2/1/4/5;
+    line-height:200px;
+}
+div.containerweb2 > div.a3{
+    grid-area:4/1/6/5;
+    line-height:200px ;
+}
+div.containerweb2 > div.a4{
+    grid-area:6/1/9/3;
+    line-height:300px;
+    
+}
+div.containerweb2 > div.a5{
+    grid-area:6/3/9/5;
+    line-height:300px;
+    
+}
+div.containerweb2 > div.a6{
+    grid-area:9/1/12/4;
+}
+div.containerweb2 > div.a7{
+    grid-area:9/4/11/5;
+}
+div.containerweb2 > div.a9{
+    grid-area: 12/4/14/5;
+}
+div.containerweb2 > div.a10{
+    grid-area: 12/1/15/4;
+}
+div.containerweb2 > div.a11{
+    grid-area:15/1/15/5;
+}
